@@ -1,7 +1,7 @@
 @import "./../variables";
 
 .calendar {
-  width: $day-size * 7 + $gap * 7;
+  width: ($day-size + $gap) * 7;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
@@ -17,12 +17,12 @@
     width: $day-size;
     height: $day-size;
     line-height: $day-size;
-    background-color: $day-background-clor;
+    background-color: $day-background-color;
     border: $day-border;
     color: $day-color;
     cursor: pointer;
 
-    transition: 0.5s;
+    transition: bottom 0.5s, background-color 0.5s;
 
     &:hover {
       bottom: 20px;
