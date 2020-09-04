@@ -1,0 +1,6 @@
+@import "./../variables";
+@import "./../mixins";
+
+@each $day in $days {
+  @include retreatBeforeFirstDay($day);
+}

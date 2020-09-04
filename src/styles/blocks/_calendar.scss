@@ -1,0 +1,38 @@
+@import "./../variables";
+
+.calendar {
+  width: $day-size * 7 + $gap * 7;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  > div {
+    position: relative;
+    bottom: 0;
+    margin-left: $gap;
+    margin-bottom: $gap;
+
+    width: $day-size;
+    height: $day-size;
+    line-height: $day-size;
+    background-color: $day-background-clor;
+    border: $day-border;
+    color: $day-color;
+    cursor: pointer;
+
+    transition: 0.5s;
+
+    &:hover {
+      bottom: 20px;
+      background-color: pink;
+    }
+  }
+
+  @for $i from 1 through 31 {
+    & :nth-child(#{$i})::after {
+      content: "#{$i}";
+    }
+  }
+}
