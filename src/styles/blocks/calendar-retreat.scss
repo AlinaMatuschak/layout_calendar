@@ -1,0 +1,9 @@
+@import "./../variables";
+
+@each $day, $day-retreat in $days {
+  .calendar-#{$day} {
+    & :first-child {
+      margin-left: ($day-size + $gap) * $day-retreat + $gap;
+    }
+  }
+}

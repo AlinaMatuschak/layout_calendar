@@ -1,7 +1,0 @@
-.calendar-28 {
-  @for $i from 29 through 31 {
-    & :nth-child(#{$i}) {
-      display: none;
-    }
-  }
-}

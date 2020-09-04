@@ -1,6 +1,5 @@
-@import "./../variables";
-@import "./../mixins";
-
-@each $day in $days {
-  @include retreatBeforeFirstDay($day);
+@for $i from 28 to 31 {
+  .calendar-#{$i} :nth-child(#{$i}) ~ * {
+    display: none;
+  }
 }
