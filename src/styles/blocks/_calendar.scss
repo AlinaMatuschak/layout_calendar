@@ -9,8 +9,6 @@
   transform: translateX(-50%);
 
   > div {
-    position: relative;
-    bottom: 0;
     margin-left: $gap;
     margin-bottom: $gap;
 
@@ -22,10 +20,10 @@
     color: $day-color;
     cursor: pointer;
 
-    transition: bottom 0.5s, background-color 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
 
     &:hover {
-      bottom: 20px;
+      transform: translateY(-20px);
       background-color: pink;
     }
   }
